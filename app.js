@@ -36,7 +36,6 @@ sequelize
   });
 
 app.get("/", (req, res) => {
-  res.set("Cache-Control", "no-store");
   res.send("Selamat datang di Aplikasi Pengelolaan Nilai Mahasiswa");
 });
 
