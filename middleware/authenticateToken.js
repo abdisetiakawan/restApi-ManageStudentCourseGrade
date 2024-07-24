@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken"); // Mengimpor modul jsonwebtoken untuk menangani token JWT
+require("dotenv").config();
 
 function authenticateToken(req, res, next) {
   const authHeader = req.headers["authorization"]; // Mendapatkan header Authorization dari permintaan

@@ -62,5 +62,3 @@ app.use(function (err, req, res, next) {
     error: req.app.get("env") === "development" ? err : {},
   });
 });
-
-module.exports = app;
