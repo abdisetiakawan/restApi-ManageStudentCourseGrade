@@ -67,7 +67,7 @@ Content-Type: application/json
 ### Create a new MataKuliah
 POST https://agungfebriansyah-production.up.railway.app/matakuliah
 Content-Type: application/json
-Authorization: Bearer <Paste Token Admin>
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBRE0xIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxODc3OTMyLCJleHAiOjE3MjE4ODE1MzJ9.EE3oSecjXR1_ePpfweHY3ets2mBzn95JP0DTz63QAgM
 
 {
   "KodeMataKuliah": "CS101",
@@ -80,7 +80,7 @@ GET https://agungfebriansyah-production.up.railway.app/matakuliah
 Authorization: Bearer <Paste Token Admin>
 
 ### Get MataKuliah by KodeMataKuliah
-GET https://agungfebriansyah-production.up.railway.app/matakuliah/MK001
+GET https://agungfebriansyah-production.up.railway.app/matakuliah/CS101
 Authorization: Bearer <Paste Token Admin>
 
 ### Update MataKuliah
