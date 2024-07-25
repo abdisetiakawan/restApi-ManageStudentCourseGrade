@@ -1,5 +1,5 @@
 ### Register a new Dosen
-POST http://localhost:3000/auth/register
+POST https://agungfebriansyah-production.up.railway.app/auth/register
 Content-Type: application/json
 
 {
@@ -13,7 +13,7 @@ Content-Type: application/json
 }
 
 ### Register a new Mahasiswa
-POST http://localhost:3000/auth/register
+POST https://agungfebriansyah-production.up.railway.app/auth/register
 Content-Type: application/json
 
 {
@@ -28,7 +28,7 @@ Content-Type: application/json
 }
 
 ### Register a new Admin
-POST http://localhost:3000/auth/register
+POST https://agungfebriansyah-production.up.railway.app/auth/register
 Content-Type: application/json
 
 {
@@ -38,7 +38,7 @@ Content-Type: application/json
 }
 
 ### Login as Dosen
-POST http://localhost:3000/auth/login
+POST https://agungfebriansyah-production.up.railway.app/auth/login
 Content-Type: application/json
 
 {
@@ -47,7 +47,7 @@ Content-Type: application/json
 }
 
 ### Login as Mahasiswa
-POST http://localhost:3000/auth/login
+POST https://agungfebriansyah-production.up.railway.app/auth/login
 Content-Type: application/json
 
 {
@@ -56,7 +56,7 @@ Content-Type: application/json
 }
 
 ### Login as Admin
-POST http://localhost:3000/auth/login
+POST https://agungfebriansyah-production.up.railway.app/auth/login
 Content-Type: application/json
 
 {
@@ -65,9 +65,9 @@ Content-Type: application/json
 }
 
 ### Create a new MataKuliah
-POST http://localhost:3000/matakuliah
+POST https://agungfebriansyah-production.up.railway.app/matakuliah
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBRE0xIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxODIzNDAyLCJleHAiOjE3MjE4MjcwMDJ9.d09IHfdLNhjoRBu2k5gjSGdnh_SGCgBQ7ZnVJtJDo80
+Authorization: Bearer <Paste Token Admin>
 
 {
   "KodeMataKuliah": "CS101",
@@ -76,17 +76,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBRE0xI
 }
 
 ### Get all MataKuliah
-GET http://localhost:3000/matakuliah
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBRE0xIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxODIzNDAyLCJleHAiOjE3MjE4MjcwMDJ9.d09IHfdLNhjoRBu2k5gjSGdnh_SGCgBQ7ZnVJtJDo80
+GET https://agungfebriansyah-production.up.railway.app/matakuliah
+Authorization: Bearer <Paste Token Admin>
 
 ### Get MataKuliah by KodeMataKuliah
-GET http://localhost:3000/matakuliah/MK001
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBRE0xIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxODIzNDAyLCJleHAiOjE3MjE4MjcwMDJ9.d09IHfdLNhjoRBu2k5gjSGdnh_SGCgBQ7ZnVJtJDo80
+GET https://agungfebriansyah-production.up.railway.app/matakuliah/MK001
+Authorization: Bearer <Paste Token Admin>
 
 ### Update MataKuliah
-PUT http://localhost:3000/matakuliah/CS101
+PUT https://agungfebriansyah-production.up.railway.app/matakuliah/CS101
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBRE0xIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxODIzNDAyLCJleHAiOjE3MjE4MjcwMDJ9.d09IHfdLNhjoRBu2k5gjSGdnh_SGCgBQ7ZnVJtJDo80
+Authorization: Bearer <Paste Token Admin>
 
 {
   "NamaMataKuliah": "Introduction to CS",
@@ -94,13 +94,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBRE0xI
 }
 
 ### Get all students
-GET http://localhost:3000/dosen/students
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJET1MxIiwicm9sZSI6ImRvc2VuIiwiaWF0IjoxNzIxODIzNDY2LCJleHAiOjE3MjE4MjcwNjZ9.cZOjU6AbOW8a5Z2HbOiA8DiqEtO7W9Kd-nkH_wJqMA8
+GET https://agungfebriansyah-production.up.railway.app/dosen/students
+Authorization: Bearer <Paste Token Dosen>
 
 ### Enter grades
-POST http://localhost:3000/dosen/grades
+POST https://agungfebriansyah-production.up.railway.app/dosen/grades
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJET1MxIiwicm9sZSI6ImRvc2VuIiwiaWF0IjoxNzIxODIzNDY2LCJleHAiOjE3MjE4MjcwNjZ9.cZOjU6AbOW8a5Z2HbOiA8DiqEtO7W9Kd-nkH_wJqMA8
+Authorization: Bearer <Paste Token Dosen>
 
 {
   "NIMMahasiswa": "210112233",
@@ -113,9 +113,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJET1MxI
 }
 
 ### Update grades
-PUT http://localhost:3000/dosen/grades/1
+PUT https://agungfebriansyah-production.up.railway.app/dosen/grades/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJET1MxIiwicm9sZSI6ImRvc2VuIiwiaWF0IjoxNzIxODIzNDY2LCJleHAiOjE3MjE4MjcwNjZ9.cZOjU6AbOW8a5Z2HbOiA8DiqEtO7W9Kd-nkH_wJqMA8
+Authorization: Bearer <Paste Token Dosen>
 
 {
   "NilaiAbsensi": 90,
@@ -126,5 +126,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJET1MxI
 }
 
 ### Delete grades
-DELETE http://localhost:3000/dosen/grades/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJET1MxIiwicm9sZSI6ImRvc2VuIiwiaWF0IjoxNzIxODIzNDY2LCJleHAiOjE3MjE4MjcwNjZ9.cZOjU6AbOW8a5Z2HbOiA8DiqEtO7W9Kd-nkH_wJqMA8
+DELETE https://agungfebriansyah-production.up.railway.app/dosen/grades/1
+Authorization: Bearer <Paste Token Dosen>
