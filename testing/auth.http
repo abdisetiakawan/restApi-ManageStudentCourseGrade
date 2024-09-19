@@ -1,5 +1,6 @@
-
-
+@mahasiswaToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJNQUgxIiwicm9sZSI6Im1haGFzaXN3YSIsImlhdCI6MTcyNjcyNjg3OCwiZXhwIjoxNzI2NzMwNDc4fQ.YJIvzX1w0BuE4payQ9nw9otGIsI-Cor2PaQuDOwdhx0
+@adminToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBRE0xIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI2NzI2ODAyLCJleHAiOjE3MjY3MzA0MDJ9.zf95DmDFuOgQXXALRdvuJPead7hJm8ZMhTPXJ_wVWno
+@dosenToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJET1MxIiwicm9sZSI6ImRvc2VuIiwiaWF0IjoxNzI2NzI2ODYyLCJleHAiOjE3MjY3MzA0NjJ9.gJJ7iFE5-qdxVdyOcLq7bTpYF14-c6R-VC9smDZy0oU
 ### Register a new Dosen
 POST http://localhost:3000/auth/register
 Content-Type: application/json
@@ -69,7 +70,7 @@ Content-Type: application/json
 ### Create a new MataKuliah
 POST http://localhost:3000/matakuliah
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBRE0xIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIxODc3OTMyLCJleHAiOjE3MjE4ODE1MzJ9.EE3oSecjXR1_ePpfweHY3ets2mBzn95JP0DTz63QAgM
+Authorization: Bearer {{adminToken}}
 
 {
   "KodeMataKuliah": "CS101",
@@ -79,16 +80,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBRE0xI
 
 ### Get all MataKuliah
 GET http://localhost:3000/matakuliah
-Authorization: Bearer <Paste Token Admin>
+Authorization: Bearer {{adminToken}}
 
 ### Get MataKuliah by KodeMataKuliah
 GET http://localhost:3000/matakuliah/CS101
-Authorization: Bearer <Paste Token Admin>
+Authorization: Bearer {{adminToken}}
 
 ### Update MataKuliah
 PUT http://localhost:3000/matakuliah/CS101
 Content-Type: application/json
-Authorization: Bearer <Paste Token Admin>
+Authorization: Bearer {{adminToken}}
 
 {
   "NamaMataKuliah": "Introduction to CS",
@@ -97,12 +98,12 @@ Authorization: Bearer <Paste Token Admin>
 
 ### Get all students
 GET http://localhost:3000/dosen/students
-Authorization: Bearer <Paste Token Dosen>
+Authorization: Bearer {{dosenToken}}
 
 ### Enter grades
 POST http://localhost:3000/dosen/grades
 Content-Type: application/json
-Authorization: Bearer <Paste Token Dosen>
+Authorization: Bearer {{dosenToken}}
 
 {
   "NIMMahasiswa": "210112233",
@@ -117,7 +118,7 @@ Authorization: Bearer <Paste Token Dosen>
 ### Update grades
 PUT http://localhost:3000/dosen/grades/1
 Content-Type: application/json
-Authorization: Bearer <Paste Token Dosen>
+Authorization: Bearer {{dosenToken}}
 
 {
   "NilaiAbsensi": 90,
@@ -129,4 +130,4 @@ Authorization: Bearer <Paste Token Dosen>
 
 ### Delete grades
 DELETE http://localhost:3000/dosen/grades/1
-Authorization: Bearer <Paste Token Dosen>
+Authorization: Bearer {{dosenToken}}
