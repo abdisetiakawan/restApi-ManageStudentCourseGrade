@@ -1,6 +1,6 @@
 // models/Dosen.js
 const { DataTypes } = require("sequelize");
-const sequelize = require("../config/database");
+const sequelize = require("../../config/database");
 
 const Dosen = sequelize.define("Dosen", {
   NIDN: {

@@ -1,10 +1,10 @@
 // models/index.js
 const sequelize = require("../config/database");
-const User = require("./User");
-const Dosen = require("./Dosen");
-const Mahasiswa = require("./Mahasiswa");
-const MataKuliah = require("./MataKuliah");
-const Nilai = require("./Nilai");
+const User = require("./entities/User");
+const Dosen = require("./entities/Dosen");
+const Mahasiswa = require("./entities/Mahasiswa");
+const MataKuliah = require("./entities/MataKuliah");
+const Nilai = require("./entities/Nilai");
 
 Dosen.hasMany(MataKuliah, { foreignKey: "NIDN" });
 MataKuliah.belongsTo(Dosen, { foreignKey: "NIDN" });
