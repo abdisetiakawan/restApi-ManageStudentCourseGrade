@@ -6,11 +6,7 @@ require("dotenv").config();
 
 // Import Models dan Routers
 const sequelize = require("./config/database");
-const authRoutes = require("./routes/auth");
-const dosenRoutes = require("./routes/dosen");
-const mahasiswaRoutes = require("./routes/mahasiswa");
-const mataKuliahRouter = require("./routes/mataKuliah");
-
+const routes = require("./routes");
 var app = express();
 
 app.use(logger("dev"));
@@ -19,10 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Membuat endPoint
-app.use("/auth", authRoutes);
-app.use("/dosen", dosenRoutes);
-app.use("/mahasiswa", mahasiswaRoutes);
-app.use("/matakuliah", mataKuliahRouter);
+app.use(routes);
 
 // Sync Sequelize models with database
 // Sync the database

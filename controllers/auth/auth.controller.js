@@ -1,12 +1,9 @@
-// routes/auth.js
-const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { User, Dosen, Mahasiswa } = require("../models");
-const router = express.Router();
+const { User, Dosen, Mahasiswa } = require("../../models");
 require("dotenv").config();
 
-router.post("/register", async (req, res) => {
+exports.register = async (req, res) => {
   const { username, password, role, ...additionalInfo } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -15,6 +12,7 @@ router.post("/register", async (req, res) => {
     if (existingUser) {
       return res.status(409).json({ error: "Username already exists" });
     }
+
     const user = await User.create({
       username,
       password: hashedPassword,
@@ -31,9 +29,9 @@ router.post("/register", async (req, res) => {
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
-});
+};
 
-router.post("/login", async (req, res) => {
+exports.login = async (req, res) => {
   const { username, password } = req.body;
 
   try {
@@ -53,6 +51,4 @@ router.post("/login", async (req, res) => {
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
-});
-
-module.exports = router;
+};
